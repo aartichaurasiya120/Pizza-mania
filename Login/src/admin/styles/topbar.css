@@ -1,0 +1,88 @@
+/* Topbar Styles */
+.topbar {
+    background: rgba(17, 17, 17, 0.95);
+    border-bottom: 2px solid rgba(179, 0, 0, 0.3);
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.topbar-left h3 {
+    color: var(--white);
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.topbar-left p {
+    color: #999;
+    font-size: 13px;
+}
+
+.topbar-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.admin-profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 15px;
+    background: rgba(179, 0, 0, 0.1);
+    border-radius: 25px;
+    border: 1px solid rgba(179, 0, 0, 0.3);
+}
+
+.admin-avatar {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: var(--primary-red);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.admin-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-name {
+    color: var(--white);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.admin-role {
+    color: var(--primary-red);
+    font-size: 11px;
+    text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+    .topbar {
+        padding: 15px 20px;
+        margin-left: 0;
+    }
+    
+    .topbar-left h3 {
+        font-size: 16px;
+    }
+    
+    .topbar-left p {
+        display: none;
+    }
+    
+    .admin-info {
+        display: none;
+    }
+}
