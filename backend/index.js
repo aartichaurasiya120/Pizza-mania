@@ -3,7 +3,7 @@ const app = express();
 const cors = require('cors');
 const dotenv = require('dotenv');
 const morgan = require('morgan');
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 8080;
 const connectDb = require('./config/db');
 
 dotenv.config();
@@ -24,6 +24,6 @@ app.use('/practice', require('./routes/pastasRoute'));
 app.use('/api/admin', require('./routes/adminRoute'));
 app.use('/api/orders', require('./routes/orderRoute'));
 
-app.listen(process.env.PORT || 5000, "0.0.0.0", () => {
-    console.log(`Server running on port ${process.env.PORT}`);
-});
+app.listen(PORT, (req, res) => {
+    console.log("Server is Running");
+})
