@@ -24,6 +24,6 @@ app.use('/practice', require('./routes/pastasRoute'));
 app.use('/api/admin', require('./routes/adminRoute'));
 app.use('/api/orders', require('./routes/orderRoute'));
 
-app.listen(PORT, (req, res) => {
-    console.log("Server is Running");
-})
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
